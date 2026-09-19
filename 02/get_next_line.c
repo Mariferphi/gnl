@@ -53,7 +53,7 @@ static char	*get_line(char *saved_buff)
 		return (NULL);
 	nl_ptr = ft_strchr(saved_buff, NEW_LINE);
 	if (nl_ptr)
-		len = (nl_ptr - saved_buff) + 1;
+		len = ft_strlen((nl_ptr - saved_buffer))
 	else
 	{
 		len = ft_strlen(saved_buff);
