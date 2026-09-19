@@ -35,9 +35,9 @@ static char	*read_save(int fd, char *saved_buff)
 			return (NULL);
 		}
 		saved_buff[bytes] = '\0';
-		temp = saved_buff;
+		temp = ft_strjoin(saved_buff, buffer)
 		free(saved_buff);
-		saved_buff = ft_strjoin(temp, buffer);
+		saved_buff = temp;
 	}
 	free(buffer);
 	return (saved_buff);
