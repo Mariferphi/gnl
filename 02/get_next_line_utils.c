@@ -6,7 +6,7 @@
 /*   By: marbecer <marbecer@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/20 17:28:19 by marbecer          #+#    #+#             */
-/*   Updated: 2026/09/19 20:43:39 by marbecer         ###   ########.fr       */
+/*   Updated: 2026/09/21 19:44:07 by marbecer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,24 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 			v_dest[i] = v_src[i];
 			i++;
 		}
+	}
+	return (dest);
+}
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	unsigned char		*v_dest;
+	const unsigned char	*v_src;
+	size_t				i;
+
+	if (!dest && !src)
+		return (0);
+	v_dest = (unsigned char *)dest;
+	v_src = (const unsigned char *)src;
+	i = 0;
+	while (i < n)
+	{
+		v_dest[i] = v_src[i];
+		i++;
 	}
 	return (dest);
 }
